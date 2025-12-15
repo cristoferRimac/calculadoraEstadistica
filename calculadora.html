@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Estadística</title>
+    <link rel="stylesheet" href="styleCalculadora.css">
+</head>
+<body>
+
+    <!-- ============================= -->
+    <!-- 1️⃣ PANTALLA DE INICIO       -->
+    <!-- ============================= -->
+    <section id="start-screen" class="start-screen">
+        <div class="start-content">
+            <h1>CALCULADORA ESTADÍSTICA</h1>
+            <p>RESUELVE • CALCULA • VISUALIZA</p>
+            <p>ESTUDIANTE: CRISTOFER CARLOS RIMAC REQUELME</p>
+            <p>PROFESOR: TERRONES GALVEZ EDWARD IVAN</p>
+            <button id="btnStart" class="btn-1">Empezar</button>
+        </div>
+        <img src="imagenes/estadistica.png" class="start-img" alt="">
+    </section>
+
+    <!-- ============================= -->
+    <!-- 2️⃣ MENÚ DE CALCULADORAS     -->
+    <!-- ============================= -->
+    <section id="topics-screen" class="hidden">
+        <h2 class="title-center">CALCULADORAS</h2>
+        <div class="topics-container">
+            <div class="topic-card" onclick="openCalculator('media')">
+                <h3>Media Aritmética</h3>
+            </div>
+            <div class="topic-card" onclick="openCalculator('mediana')">
+                <h3>Mediana</h3>
+            </div>
+            <div class="topic-card" onclick="openCalculator('moda')">
+                <h3>Moda</h3>
+            </div>
+            <div class="topic-card" onclick="openCalculator('tabla-frecuencia')">
+                <h3>Tabla de Frecuencias</h3>
+            </div>
+            <div class="topic-card" onclick="openCalculator('varianza')">
+                <h3>Varianza y Desviación Estándar</h3>
+            </div>
+            <div class="topic-card" onclick="openCalculator('cuartiles')">
+                <h3>Cuartiles</h3>
+            </div>
+            <div class="topic-card" onclick="openCalculator('deciles')">
+                <h3>Deciles</h3>
+            </div>
+            <div class="topic-card" onclick="openCalculator('percentiles')">
+                <h3>Percentiles</h3>
+            </div>
+            <div class="topic-card" onclick="openCalculator('regresion')">
+                <h3>Regresión Lineal Simple</h3>
+            </div>
+            <div class="topic-card" onclick="openCalculator('regresion-multiple')">
+                <h3>Regresión Lineal Múltiple</h3>
+            </div>
+            <div class="topic-card" onclick="openCalculator('ic')">
+                <h3>Intervalo de Confianza</h3>
+            </div>
+            <div class="topic-card" onclick="openCalculator('correlacion')">
+                <h3>Coeficiente de Correlación</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================= -->
+    <!-- 3️⃣ VISTA DE CALCULADORA     -->
+    <!-- ============================= -->
+    <section id="calculator-view" class="hidden">
+        <div class="enlaces">
+            <div class="enlace">
+                <li><a href="#" onclick="goBack()">Volver</a></li>
+                <li><a href="#" onclick="toggleCalculatorSelector(event)">Cambiar</a></li>
+            </div>
+        </div>
+
+        <!-- MENÚ DESPLEGABLE (igual al index) -->
+        <div id="selector-calculadoras" class="selector-opciones hidden">
+            <p onclick="openCalculator('media')">Media Aritmética</p>
+            <p onclick="openCalculator('mediana')">Mediana</p>
+            <p onclick="openCalculator('moda')">Moda</p>
+            <p onclick="openCalculator('tabla-frecuencia')">Tabla de Frecuencias</p>
+            <p onclick="openCalculator('varianza')">Varianza y Desviación Estándar</p>
+            <p onclick="openCalculator('cuartiles')">Cuartiles</p>
+            <p onclick="openCalculator('deciles')">Deciles</p>
+            <p onclick="openCalculator('percentiles')">Percentiles</p>
+            <p onclick="openCalculator('regresion')">Regresión Lineal Simple</p>
+            <p onclick="openCalculator('regresion-multiple')">Regresión Lineal Múltiple</p>
+            <p onclick="openCalculator('ic')">Intervalo de Confianza</p>
+            <p onclick="openCalculator('correlacion')">Coeficiente de Correlación</p>
+        </div>
+
+        <div id="calculator-content" class="calculator-content"></div>
+    </section>
+    
+
+    <script src="calculadora.js"></script>
+</body>
+</html>
